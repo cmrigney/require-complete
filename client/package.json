@@ -1,0 +1,27 @@
+{
+	"name": "require-complete",
+	"description": "Require complete extension for VS Code",
+	"author": "Cody Rigney",
+	"license": "MIT",
+	"version": "0.0.1",
+	"publisher": "crigney",
+	"engines": {
+		"vscode": "^0.10.x"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onLanguage:javascript"
+	],
+	"main": "./extension",
+	"contributes": {
+	},
+	"devDependencies": {
+		"typescript": "^1.6.2",
+		"vscode": "0.10.x"
+	},
+	"dependencies": {
+		"vscode-languageclient": "^1.1.0"
+	}
+}

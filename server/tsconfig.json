@@ -1,0 +1,14 @@
+{
+    "path": "typings",
+    "bundle": "typings/tsd.d.ts",
+	"compilerOptions": {
+		"target": "es6",
+		"module": "commonjs",
+        "moduleResolution": "node",
+        "outDir": "../client/server",
+        "allowJs": true
+	},
+	"exclude": [
+		"node_modules"
+	]
+}
