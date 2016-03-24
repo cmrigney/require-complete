@@ -464,7 +464,17 @@ function generateFromLocal(file, existingPath, startPos, document) {
 
 connection.onCompletion((textDocumentPosition) => {
     var file = textDocumentPosition.uri.replace('%3A', ':').replace('file:///', '');
-    file[0] = file[0].toUpperCase();
+    
+    var isWin = /^win/.test(process.platform);
+    
+    if(isWin) {
+      file[0] = file[0].toUpperCase();
+    }
+    else {
+      file = '/' + file;
+    }
+    
+    
 
     var document = documents.get(textDocumentPosition.uri);
     var offset = document.offsetAt(textDocumentPosition.position);
