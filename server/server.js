@@ -404,6 +404,7 @@ function generateFromLocal(file, existingPath, startPos, document) {
     
     function getRelatedPath(f) {
         var filePath = ensureEndingSlash(path.dirname(f));
+        filePath = filePath.charAt(0).toUpperCase() + filePath.slice(1);
         var filename = path.basename(f);
         var firstDiff = findFirstDiff(filePath, workingPath);
         if(firstDiff < 0) {
@@ -468,12 +469,11 @@ connection.onCompletion((textDocumentPosition) => {
     var isWin = /^win/.test(process.platform);
     
     if(isWin) {
-      file[0] = file[0].toUpperCase();
+      file = file.charAt(0).toUpperCase() + file.slice(1);
     }
     else {
       file = '/' + file;
     }
-    
     
 
     var document = documents.get(textDocumentPosition.uri);
