@@ -3,7 +3,7 @@
 	"description": "Require complete extension for VS Code",
 	"author": "Cody Rigney",
 	"license": "MIT",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"publisher": "sensourceinc",
 	"engines": {
 		"vscode": "^0.10.x"
