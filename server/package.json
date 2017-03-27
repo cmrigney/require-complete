@@ -1,7 +1,7 @@
 {
   "name": "require-complete-server",
   "description": "Require complete extension server.",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "author": "Cody Rigney",
   "license": "MIT",
   "engines": {
