@@ -1,20 +1,22 @@
 {
-	"name": "require-complete-server",
-	"description": "Require complete extension server.",
-	"version": "0.0.3",
-	"author": "Cody Rigney",
-	"license": "MIT",
-	"engines": {
-		"node": "*"
-	},
-	"dependencies": {
-		"vscode-languageserver": "~1.1.0",
+  "name": "require-complete-server",
+  "description": "Require complete extension server.",
+  "version": "0.0.3",
+  "author": "Cody Rigney",
+  "license": "MIT",
+  "engines": {
+    "node": "*"
+  },
+  "dependencies": {
+    "vscode-languageserver": "^3.1.0",
     "lodash": "4.6.1"
-	},
+  },
+  "devDependencies": {
+    "@types/node": "^6.0.52",
+    "typescript": "^2.1.5"
+  },
   "scripts": {
-		"compile": "installServerIntoExtension ../client ./package.json ./tsconfig.json && cp server.js ../client/server/server.js"
-	},
-	"devDependencies": {
-		"typescript": "^1.6.2"
-	}
+    "compile": "installServerIntoExtension ../client ./package.json ./tsconfig.json && tsc -p .",
+    "watch": "installServerIntoExtension ../client ./package.json ./tsconfig.json && tsc --watch -p ."
+  }
 }
